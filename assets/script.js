@@ -1,6 +1,4 @@
 /*GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
 WHEN I scroll down
 THEN I am presented with time blocks for standard business hours
 WHEN I view the time blocks for that day
@@ -13,10 +11,21 @@ WHEN I refresh the page
 THEN the saved events persist */
 
 let currentDay = document.getElementById("current-day");
-let hoursOfDay = document.getElementById("hours");
 let entryField = document.getElementById("entry-field");
 let saveButton = document.querySelector("saveBtn");
 
 //sets the date with the help of Moment.js
 let today = moment();
 currentDay.textContent = today.format("MM-DD-YYYY");
+
+//array used to loop through the times of the day
+let hours = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
+let hoursOfDay = document.getElementById("hours");
+
+for (let i = 0; i < hours.length; i++) {
+    let hoursDiv = document.createElement("div");
+    hoursDiv.textContent = hours[i];
+    hoursOfDay.appendChild(hoursDiv);
+    hoursDiv.setAttribute("class", "hour time-block");
+    
+}
