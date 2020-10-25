@@ -32,8 +32,17 @@ for (let i = 0; i < hours.length; i++) {
 
 for (let i = 0; i < 9; i++) {
     let buttonDiv = document.createElement("button");
+    buttonDiv.textContent = "Save";
     saveButtons.appendChild(buttonDiv);
     buttonDiv.setAttribute("class", "saveBtn");
+}
+
+for (let i = 0; i < 9; i++) {
+    let textInput = document.createElement("textarea");
+    textInput.textContent = "text area";
+    entryField.appendChild(textInput);
+    textInput.setAttribute("class", "row");
+    
 }
 /*listEl.addEventListener("click", function(event) {
   event.preventDefault();
