@@ -12,7 +12,7 @@ THEN the saved events persist */
 
 let currentDay = document.getElementById("current-day");
 let entryField = document.getElementById("entry-field");
-let saveButton = document.querySelector("saveBtn");
+let saveButton = document.querySelector("saveButtons");
 
 //sets the date with the help of Moment.js
 let today = moment();
@@ -22,10 +22,24 @@ currentDay.textContent = today.format("MM-DD-YYYY");
 let hours = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 let hoursOfDay = document.getElementById("hours");
 
+//adds hours to the left side of the page
 for (let i = 0; i < hours.length; i++) {
     let hoursDiv = document.createElement("div");
     hoursDiv.textContent = hours[i];
     hoursOfDay.appendChild(hoursDiv);
     hoursDiv.setAttribute("class", "hour time-block");
-    
 }
+
+for (let i = 0; i < 9; i++) {
+    let buttonDiv = document.createElement("button");
+    saveButtons.appendChild(buttonDiv);
+    buttonDiv.setAttribute("class", "saveBtn");
+}
+/*listEl.addEventListener("click", function(event) {
+  event.preventDefault();
+  if(event.target.matches("button")) {
+    let item = document.createElement("div");
+    item.textContent = groceries[event.target.parentElement.id];
+    shoppingCartEl.append(item);
+  }
+});*/
