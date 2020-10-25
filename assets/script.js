@@ -12,12 +12,13 @@ THEN the saved events persist */
 
 let currentDay = document.getElementById("current-day");
 let entryField = document.getElementById("entry-field");
-let saveButton = document.querySelector("saveButtons");
+let saveButton = document.getElementById("saveButtons");
 
 //sets the date with the help of Moment.js
 let today = moment();
 currentDay.textContent = today.format("MM-DD-YYYY");
 
+/*
 //array used to loop through the times of the day
 let hours = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 let hoursOfDay = document.getElementById("hours");
@@ -29,21 +30,8 @@ for (let i = 0; i < hours.length; i++) {
     hoursOfDay.appendChild(hoursDiv);
     hoursDiv.setAttribute("class", "hour time-block");
 }
+*/
 
-for (let i = 0; i < 9; i++) {
-    let buttonDiv = document.createElement("button");
-    buttonDiv.textContent = "Save";
-    saveButtons.appendChild(buttonDiv);
-    buttonDiv.setAttribute("class", "saveBtn");
-}
-
-for (let i = 0; i < 9; i++) {
-    let textInput = document.createElement("textarea");
-    textInput.textContent = "text area";
-    entryField.appendChild(textInput);
-    textInput.setAttribute("class", "row");
-    
-}
 /*listEl.addEventListener("click", function(event) {
   event.preventDefault();
   if(event.target.matches("button")) {

@@ -30,13 +30,25 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="time-block row">
-        <div class="col-md-2">
-          <div id="hours"></div>
+      <div class="time-block row" id="row1">
+        <div class="col-md-2 hour">
+          <p id="hours">
+            9am
+          </p>
         </div>
         <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
-        <div class="col-md-2" id="saveButtons">
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save
+        </button>
+      </div>
+
+      <div class="time-block row" id="row2">
+        <div class="col-md-2 hour">
+          <p id="hours">
+            10am
+          </p>
         </div>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
       </div>
     </div>
 
@@ -46,3 +58,9 @@
     <script src="https://momentjs.com/downloads/moment.js"></script>
   </body>
 </html>
+
+<!-- make 9 columns, give each its own id, each with the class of "timeblock"
+<div class- time-block row>
+<div hours>
+<div> user input area
+<div button>-->
