@@ -24,6 +24,7 @@ function updateTime() {
 
 }*/
 
+//I want to loop through the hours and if the hour that is grabbed from currentHour (which is the current hour, ie 5pm) is greater than the hour within the HTML, then it turns the box grey, less than turns the box green and red for equals.
 let hours = {
   9: "9am",
   10: "10am",
