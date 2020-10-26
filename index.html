@@ -28,25 +28,77 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="current-day" class="lead"></p>
     </header>
+
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="time-block row" id="row1">
-        <div class="col-md-2 hour">
-          <p id="hours">
+        <p class="col-md-2 hour">
             9am
-          </p>
-        </div>
+        </p>
         <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
-        <button class="col-md-2 saveBtn" id="saveButtons"> Save
-        </button>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
       </div>
 
       <div class="time-block row" id="row2">
-        <div class="col-md-2 hour">
-          <p id="hours">
+        <p class="col-md-2 hour">
             10am
-          </p>
-        </div>
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row3">
+        <p class="col-md-2 hour">
+            11am
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row4">
+        <p class="col-md-2 hour">
+            12pm
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row5">
+        <p class="col-md-2 hour">
+            1pm
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row6">
+        <p class="col-md-2 hour">
+            2pm
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row7">
+        <p class="col-md-2 hour">
+            3pm
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row8">
+        <p class="col-md-2 hour">
+            4pm
+        </p>
+        <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
+        <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
+      </div>
+
+      <div class="time-block row" id="row9">
+        <p class="col-md-2 hour">
+            5pm
+        </p>
         <textarea class="col-md-8" name="user-input" id="entry-field"></textarea>
         <button class="col-md-2 saveBtn" id="saveButtons"> Save </button>
       </div>
@@ -55,12 +107,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/script.js"></script>
-    <script src="https://momentjs.com/downloads/moment.js"></script>
   </body>
 </html>
 
-<!-- make 9 columns, give each its own id, each with the class of "timeblock"
-<div class- time-block row>
-<div hours>
-<div> user input area
-<div button>-->
+
+<!--
+Question two, is that when someone types in a box, and clicks save, it has to save that into local storage. I know how to save something to local storage, but I don't know how to set it up so the program knows which box was typed in and the corresponding save button, unless I give an id to everything and write out every button click? I know we learned how to use delegation so I could use the parent to capture the click, but I still don't know how to go about programming that in to know which section was filled in... If that makes sense lol. 
+-->
