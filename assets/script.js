@@ -17,6 +17,64 @@ currentDay.textContent = today.format("MM-DD-YYYY, LT");
 //pulls the current hour
 let currentHour = moment().hour();
 
+//times
+let nineAM = document.getElementById("row-9");
+nineAM.innerHTML = "9 am";
+let tenAM = document.getElementById("row-10");
+tenAM.innerHTML = "10 am";
+let elevenAM = document.getElementById("row-11");
+elevenAM.innerHTML = "11 am";
+let twelvePM = document.getElementById("row-12");
+twelvePM.innerHTML = "12 pm";
+let onePM = document.getElementById("row-13");
+onePM.innerHTML = "1 pm";
+let twoPM = document.getElementById("row-14");
+twoPM.innerHTML = "2 pm";
+let threePM = document.getElementById("row-15");
+threePM.innerHTML = "3 pm";
+let fourPM = document.getElementById("row-16");
+fourPM.innerHTML = "4 pm";
+let fivePM = document.getElementById("row-17");
+fivePM.innerHTML = "5 pm";
+
+//how to parse the string from the number
+
+let nineAMSplit = nineAM.innerHTML.split(" ");
+let tenAMSplit = tenAM.innerHTML.split(" ");
+let elevenAMSplit = elevenAM.innerHTML.split(" ");
+let twelvePMSplit = twelvePM.innerHTML.split(" ");
+let onePMSplit = onePM.innerHTML.split(" ");
+let twoPMSplit = twoPM.innerHTML.split(" ");
+let threePMSplit = threePM.innerHTML.split(" ");
+let fourPMSplit = fourPM.innerHTML.split(" ");
+let fivePMSplit = fivePM.innerHTML.split(" ");
+
+console.log(nineAMSplit[0]);
+
+//parse these before putting them into array so that they are a number
+//figure out how to make it so time knows between am and pm
+
+let timesArray = [nineAMSplit[0], tenAMSplit[0], elevenAMSplit[0], twelvePMSplit[0], onePMSplit[0], twoPMSplit[0], threePMSplit[0], fourPMSplit[0], fivePMSplit[0]];
+
+console.log(timesArray[3]); //prints 12
+
+for (let t = 0; t < timesArray.length; t++) {
+  if (timesArray[t][0] === currentHour) {
+    console.log("this is the same time as now");
+  } else if (timesArray[t][0] > currentHour) {
+    console.log("this is bigger than the current time");
+  } else if (timesArray[t][0] < currentHour) {
+    console.log("this is smaller than the current time");
+  }
+}
+
+
+
+
+//console.log(timeSplit);
+
+// we need to grab each element ID from the rows, and then split them using .split("-") which will split the string along the dash, and then we only want the number. So is it let 9am = document.getElementById(split("row-9")) ? Or do we split it in a loop somehow? Make an array let hours = [9am, 10am, 11am, 12pm] and then 9am above connects to 9am on the page. We loop through hours and if hours[i] > currentHour, green hours[i] = currentHour, red hours[i] < currentHours, grey
+
 //checks the current time
 /*window.setInterval(updateTime, 10000);
 
@@ -25,24 +83,13 @@ function updateTime() {
 }*/
 
 //I want to loop through the hours and if the hour that is grabbed from currentHour (which is the current hour, ie 5pm) is greater than the hour within the HTML, then it turns the box grey, less than turns the box green and red for equals.
-let hours = {
-  9: "9am",
-  10: "10am",
-  11: "11am",
-  12: "12pm",
-  13: "1pm",
-  14: "2pm",
-  15: "3pm",
-  16: "4pm",
-  17: "5pm"
-}
 
-for (let t = 0; t < hours.length; t++) {
+/*for (let t = 0; t < hours.length; t++) {
   if (currentHour > hours[t]) {
     
   }
   
-}
+} */
 
 
 
@@ -62,6 +109,7 @@ for (let t = 0; t < hours.length; t++) {
   }
 } */
 
+/*
 let times = {
   nineAM: document.getElementById("row1"),
   tenAM: document.getElementById("row2"),
@@ -110,4 +158,4 @@ saveButton.addEventListener("click", function(event) {
     userEmailSpan.textContent = lastUser.email;
     userPasswordSpan.textContent = lastUser.password;
   }
-});
+}); */
