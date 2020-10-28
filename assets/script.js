@@ -63,9 +63,8 @@ console.log(nineAMSplit[0]);
 
 let timesArray = [nineAMSplit[0], tenAMSplit[0], elevenAMSplit[0], twelvePMSplit[0], onePMSplit[0], twoPMSplit[0], threePMSplit[0], fourPMSplit[0], fivePMSplit[0]];
 
-let divTimes = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM] //put this into the for loop
+let divTimes = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
 
-//I want this loop to loop through the array, and match the number to the current hour. From there I want to set the class to present, past or future.
 for (let t = 0; t < timesArray.length; t++) {
   if (timesArray[t] == currentHour) {
     console.log("this is the same time as now");
