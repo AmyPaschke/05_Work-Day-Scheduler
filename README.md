@@ -1,6 +1,6 @@
 # 05_Work-Day-Scheduler
 
-A jQuery-based calendar
+A JavaScript-based calendar
 
 View the finished quiz [here](https://amypaschke.github.io/05_Work-Day-Scheduler/).
 
