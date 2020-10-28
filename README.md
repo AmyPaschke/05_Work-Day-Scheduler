@@ -12,7 +12,7 @@ The motivation for this project was to attempt to combine my knowledge of JavaSc
 
 ## Screenshots
 
-Examples image of the finished project:
+Example image of the finished project:
 
 ![1](https://user-images.githubusercontent.com/70075341/97485292-ec12b500-1927-11eb-81de-2a1ae79deace.JPG)
 
