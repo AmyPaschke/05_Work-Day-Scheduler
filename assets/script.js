@@ -7,47 +7,63 @@ WHEN I refresh the page
 THEN the saved events persist */
 
 let currentDay = document.getElementById("current-day");
-let entryField = document.getElementById("entry-field");
 let saveButton = document.getElementById("saveButtons");
 
 //sets the date with the help of Moment.js
 let today = moment();
-currentDay.textContent = today.format("MM-DD-YYYY, LT");
+currentDay.textContent = today.format("MM-DD-YYYY, kk:mm");
 
 //pulls the current hour
 let currentHour = moment().hour();
 
 //times
 let nineAM = document.getElementById("row-9");
-nineAM.innerHTML = "9 am";
+let nineAMTime = document.getElementById("row-9-time");
+nineAMTime.innerHTML = "9 00";
+
 let tenAM = document.getElementById("row-10");
-tenAM.innerHTML = "10 am";
+let tenAMTime = document.getElementById("row-10-time");
+tenAMTime.innerHTML = "10 00";
+
 let elevenAM = document.getElementById("row-11");
-elevenAM.innerHTML = "11 am";
+let elevenAMTime = document.getElementById("row-11-time");
+elevenAMTime.innerHTML = "11 00";
+
 let twelvePM = document.getElementById("row-12");
-twelvePM.innerHTML = "12 pm";
+let twelvePMTime = document.getElementById("row-12-time");
+twelvePMTime.innerHTML = "12 00";
+
 let onePM = document.getElementById("row-13");
-onePM.innerHTML = "1 pm";
+let onePMTime = document.getElementById("row-13-time");
+onePMTime.innerHTML = "13 00";
+
 let twoPM = document.getElementById("row-14");
-twoPM.innerHTML = "2 pm";
+let twoPMTime = document.getElementById("row-14-time");
+twoPMTime.innerHTML = "14 00";
+
 let threePM = document.getElementById("row-15");
-threePM.innerHTML = "3 pm";
+let threePMTime = document.getElementById("row-15-time");
+threePMTime.innerHTML = "15 00";
+
 let fourPM = document.getElementById("row-16");
-fourPM.innerHTML = "4 pm";
+let fourPMTime = document.getElementById("row-16-time");
+fourPMTime.innerHTML = "16 00";
+
 let fivePM = document.getElementById("row-17");
-fivePM.innerHTML = "5 pm";
+let fivePMTime = document.getElementById("row-17-time");
+fivePMTime.innerHTML = "17 00";
 
 //how to parse the string from the number
 
-let nineAMSplit = nineAM.innerHTML.split(" ");
-let tenAMSplit = tenAM.innerHTML.split(" ");
-let elevenAMSplit = elevenAM.innerHTML.split(" ");
-let twelvePMSplit = twelvePM.innerHTML.split(" ");
-let onePMSplit = onePM.innerHTML.split(" ");
-let twoPMSplit = twoPM.innerHTML.split(" ");
-let threePMSplit = threePM.innerHTML.split(" ");
-let fourPMSplit = fourPM.innerHTML.split(" ");
-let fivePMSplit = fivePM.innerHTML.split(" ");
+let nineAMSplit = nineAMTime.innerHTML.split(" ");
+let tenAMSplit = tenAMTime.innerHTML.split(" ");
+let elevenAMSplit = elevenAMTime.innerHTML.split(" ");
+let twelvePMSplit = twelvePMTime.innerHTML.split(" ");
+let onePMSplit = onePMTime.innerHTML.split(" ");
+let twoPMSplit = twoPMTime.innerHTML.split(" ");
+let threePMSplit = threePMTime.innerHTML.split(" ");
+let fourPMSplit = fourPMTime.innerHTML.split(" ");
+let fivePMSplit = fivePMTime.innerHTML.split(" ");
 
 console.log(nineAMSplit[0]);
 
@@ -56,19 +72,21 @@ console.log(nineAMSplit[0]);
 
 let timesArray = [nineAMSplit[0], tenAMSplit[0], elevenAMSplit[0], twelvePMSplit[0], onePMSplit[0], twoPMSplit[0], threePMSplit[0], fourPMSplit[0], fivePMSplit[0]];
 
+let divTimes = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM] //put this into the for loop
+
 console.log(timesArray[3]); //prints 12
 
 //I want this loop to loop through the array, and match the number to the current hour. From there I want to set the class to present, past or future.
 for (let t = 0; t < timesArray.length; t++) {
-  if (timesArray[t] === currentHour) {
+  if (timesArray[t] == currentHour) {
     console.log("this is the same time as now");
-    timesArray[t].classList.toggle("present");
+    divTimes[t].classList.toggle("present");
   } else if (timesArray[t] > currentHour) {
     console.log("this is bigger than the current time");
-    timesArray[t].classList.toggle("future");
+    divTimes[t].classList.toggle("future");
   } else if (timesArray[t] < currentHour) {
     console.log("this is smaller than the current time");
-    timesArray[t].classList.toggle("past");
+    divTimes[t].classList.toggle("past");
   }
 }
 
